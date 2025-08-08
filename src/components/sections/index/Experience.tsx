@@ -68,7 +68,6 @@ export default function Experience() {
                         gradient="bg-gradient-to-br"
                     />
                     <ExperienceCard
-                        url="https://ranked.tagfeuds.com"
                         title="Tag Feuds"
                         fullDescription={[
                             "While working at Tag Feuds I've made different discord bots and websites to assist in hosting TNT Tag events to hundreds of people. The biggest project was my ranked bot that allows players to 1v1 or 2v2 in ranked matches and climb the ELO ladder. Queueing, matchmaking, and elo calculations are all done by the bot.",
@@ -81,7 +80,7 @@ export default function Experience() {
                             "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/qozh8etz.png"
                         ]}
                         myRole="Full-stack Developer"
-                        timeline="November 2024 - Present"
+                        timeline="November 2024 - August 2025"
                         delay={0.3}
                         gradient="bg-gradient-to-br"
                     />
