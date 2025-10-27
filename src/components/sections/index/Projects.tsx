@@ -26,11 +26,11 @@ export default function Projects() {
             </div>
           }
           <ProjectCard
-            url="https://lilith.aiden.gg"
+            url="https://lilith.rip"
             title="Lilith Website"
             fullDescription={[
               "Lilith is a proxy mod for Hypixel that lets you to see the stats of other players in your game, auto dodge games that have cheaters, lookup stats for any player in game, and more.",
-              "Unfortunately right as the new website was about to launch the creator of Lilith had to discontinue the project due to a change that Hypixel made that not only killed off Lilith but multiple other projects like it.",
+              "This website serves as the main hub for Lilith, providing information about its features, download links, and support resources.",
             ]}
             cardImage="https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/k2irxpbf.png"
             cardDescription="Lilith is a proxy mod for Hypixel that lets you to see the stats of other players in your game, auto dodge games that have cheaters, lookup stats for any player in game, and more."
@@ -39,7 +39,6 @@ export default function Projects() {
               "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/oxj9zman.png"
             ]}
             myRole="Frontend Developer/Designer"
-            timeline="August 2024 - August 2024"
             delay={0.1}
             gradient="bg-gradient-to-tl"
           />
@@ -59,7 +58,6 @@ export default function Projects() {
               "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/77qjr509.png"
             ]}
             myRole="Founder, Head Developer, Designer"
-            timeline="March 2023 - Present"
             delay={0.2}
             gradient="bg-gradient-to-tl"
           />

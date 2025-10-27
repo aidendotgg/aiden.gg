@@ -1,5 +1,5 @@
 import AboutCard from "@/components/AboutCard";
-import { Presence, Tech } from "../../../../typings";
+import type { Presence, Tech } from "../../../../typings";
 import { motion } from "framer-motion";
 import PresenceCard from "@/components/PresenceCard";
 import { useEffect, useState } from "react";
@@ -97,7 +97,7 @@ export default function About() {
         <ul className="grid grid-cols-2 gap-4 mt-4">
           <AboutCard
             title="Overall"
-            description="I've been running websites and other projects since the age of 15 but didn't learn how to code until I was 16 as it took me a bit to find a good way to start learning. By the end of my education, I hope to secure a rewarding job in web development, as it is a lifelong passion of mine. I enjoy creating things and find great satisfaction when others genuinely use and appreciate the end product."
+            description="I've been running websites and other projects since the age of 15 but didn't learn how to code until I was nearly 17 as it took me a bit to find a good way to start learning. By the end of my education, I hope to secure a rewarding job in web development, as it is a lifelong passion of mine. I enjoy creating things and find great satisfaction when others genuinely use and appreciate the end product."
             direction="top"
             span={2}
             delay={0.1}
@@ -105,7 +105,7 @@ export default function About() {
           />
           <AboutCard
             title="Frontend"
-            description="I have a little over 2 years of experience with frontend development, and I have worked with a variety of different frameworks and libraries."
+            description="I have ~3 years of experience with frontend development, and I have worked with a variety of different frameworks and libraries."
             tech={frontendTech}
             direction="left"
             span={1}
@@ -114,7 +114,7 @@ export default function About() {
           />
           <AboutCard
             title="Backend"
-            description="I have a little over 1 year of experience with backend development. I have used different frameworks and runtimes to create various APIs."
+            description="I have ~3 years of experience with backend development. I have used different frameworks and runtimes to create various APIs."
             tech={backendTech}
             direction="right"
             span={1}

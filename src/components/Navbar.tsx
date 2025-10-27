@@ -36,7 +36,7 @@ export default function Navbar() {
                 <nav style={{ boxShadow: '0 0 30px 2.5px #0a0a0a' }} className="flex h-14 max-w-[46rem] w-screen bg-gradient-to-br from-primary/90 to to-secondary/90 backdrop-blur-md rounded-lg border-1 border-accent px-4">
                     <div className="flex flex-row items-center justify-between w-full">
                         <div className="flex flex-row gap-2 items-center">
-                            <img alt="" draggable={false} className="h-10 w-10" src="/me.png" />
+                            <img alt="" draggable={false} className="h-10 w-10 rounded-full border-1 border-accent" src="/me.jpeg" />
                             <button onClick={handleClickScroll} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
                                 About
                             </button>

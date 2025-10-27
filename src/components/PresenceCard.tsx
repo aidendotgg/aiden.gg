@@ -1,5 +1,5 @@
-import { Presence } from "../../typings";
 import "react-responsive-carousel/lib/styles/carousel.min.css"
+import type { Presence } from "../../typings";
 import { Carousel } from "react-responsive-carousel";
 import { motion } from "framer-motion";
 import Divider from "@/components/Divider";

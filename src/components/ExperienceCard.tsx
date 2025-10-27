@@ -69,7 +69,7 @@ export default function ExperienceCard({ url, title, fullDescription, cardDescri
                                 <h2 className="sm:text-2xl text-xl font-semibold">
                                     Overview
                                 </h2>
-                                <div className="max-h-[16.5rem] overflow-y-scroll bg-neutral-800 border-1 border-accent rounded-lg p-2">
+                                <div className="max-h-[16.5rem] overflow-y-auto bg-neutral-800 border-1 border-accent rounded-lg p-2">
                                     {fullDescription.map((desc, i) => (
                                         <p key={i} className="sm:text-lg text-base first:mt-0 mt-2 max-w-[28rem]">{desc}</p>
                                     ))}

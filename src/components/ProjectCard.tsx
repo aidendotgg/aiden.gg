@@ -6,7 +6,7 @@ import MediaCarousel from "@/components/MediaCarousel";
 import Button from "@/components/Button";
 import LinkButton from "@/components/LinkButton";
 
-export default function ProjectCard({ url, title, fullDescription, cardDescription, cardImage, media, delay, gradient, myRole, timeline }: { url?: string, title: string, fullDescription: string[], cardDescription: string, cardImage: string, media: string[], delay: number, gradient: string, myRole: string, timeline: string }) {
+export default function ProjectCard({ url, title, fullDescription, cardDescription, cardImage, media, delay, gradient, myRole }: { url?: string, title: string, fullDescription: string[], cardDescription: string, cardImage: string, media: string[], delay: number, gradient: string, myRole: string }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -52,10 +52,6 @@ export default function ProjectCard({ url, title, fullDescription, cardDescripti
                 <h2 className="sm:text-2xl text-xl font-semibold">My Role</h2>
                 <p className="sm:text-lg text-base">{myRole}</p>
               </div>
-              <div className="flex flex-col mt-2">
-                <h2 className="sm:text-2xl text-xl font-semibold">Timeline</h2>
-                <p className="sm:text-lg text-base">{timeline}</p>
-              </div>
             </div>
             <div className="w-auto h-0.5 bg-accent rounded-lg lg:hidden block my-2" />
             <div className="w-0.5 h-auto bg-accent rounded-lg lg:block hidden" />
@@ -63,7 +59,7 @@ export default function ProjectCard({ url, title, fullDescription, cardDescripti
               <h2 className="sm:text-2xl text-2xl font-semibold">
                 Project Overview
               </h2>
-              <div className="max-h-[16.5rem] overflow-y-scroll bg-neutral-800 border-1 border-accent rounded-lg p-2">
+              <div className="max-h-[16.5rem] overflow-y-auto bg-neutral-800 border-1 border-accent rounded-lg p-2">
                 {fullDescription.map((desc, i) => (
                   <p key={i} className="sm:text-lg text-base first:mt-0 mt-2 max-w-[28rem]">{desc}</p>
                 ))}

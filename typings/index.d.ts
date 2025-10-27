@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
-interface Tech {
+export interface Tech {
     title: string;
     icon: ReactNode;
     link: string;
