@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
           description: "Aiden's personal site",
           images: [
             {
-              url: "me.jpeg",
+              url: "/me.jpeg",
               alt: "aidendotgg",
             },
           ],
