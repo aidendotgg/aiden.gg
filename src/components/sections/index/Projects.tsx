@@ -32,7 +32,7 @@ export default function Projects() {
               "Lilith is a proxy mod for Hypixel that lets you to see the stats of other players in your game, auto dodge games that have cheaters, lookup stats for any player in game, and more.",
               "This website serves as the main hub for Lilith, providing information about its features, download links, and support resources.",
             ]}
-            cardImage="https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/k2irxpbf.png"
+            cardImage="https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/whlidakc.png"
             cardDescription="Lilith is a proxy mod for Hypixel that lets you to see the stats of other players in your game, auto dodge games that have cheaters, lookup stats for any player in game, and more."
             media={[
               "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/7l2m7dcd.mp4",
@@ -46,16 +46,15 @@ export default function Projects() {
             url="https://tnttag.info"
             title="TNTTag Info"
             fullDescription={[
-              "TNTTag info is a stats website for the Hypixel game 'TNT Tag'. You can view player stats or view the top 100 leaderboard. There is also a discord bot you can invite to your server.",
-              "This website was made because at the time there wasn't a good place to view every single TNT Tag stat. TNT Tag is one of my favorite games on Hypixel and I wanted to make a website that would help the community.",
-              "There is also a proxy mod to go along with it that uses the same API as the website. The mod has features like player list stats, audible count down, powerup notifications, and more.",
+              "TNTTag info is a stats website for the Hypixel game TNT Tag. You can view an individual player's stats or view the top 100 wins and kills leaderboard.",
+              "This website was made because at the time there wasn't a good place to view every single TNT Tag stat. TNT Tag is one of my favorite games on Hypixel and I wanted to make a website that would help the community."
             ]}
-            cardImage="https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/8e6lpnrw.png"
-            cardDescription="TNTTag info is a stats website for the Hypixel game 'TNT Tag'. You can view player stats or view the top 100 leaderboard. There is also a discord bot you can invite to your server."
+            cardImage="https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/v2ivy4fx.png"
+            cardDescription="TNTTag info is a stats website for the Hypixel game TNT Tag. You can view an individual player's stats or view the top 100 wins and kills leaderboard."
             media={[
-              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/8e6lpnrw.png",
-              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/zptwyhjn.png",
-              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/77qjr509.png"
+              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/v2ivy4fx.png",
+              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/im0ufap9.png",
+              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/mlv9fs7c.png"
             ]}
             myRole="Founder, Head Developer, Designer"
             delay={0.2}

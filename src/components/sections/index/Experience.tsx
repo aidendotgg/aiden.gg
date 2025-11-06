@@ -61,27 +61,13 @@ export default function Experience() {
                         ]}
                         cardImage="https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/xt9q5o0l.png"
                         cardDescription="While working on Out I've collaborated closely with a designer to create intuitive and visually appealing user interfaces, ensuring seamless user experiences. I've also aided in the process of pushing the site into production securely and efficiently by advising on best practices and implementing security measures."
-                        media={["https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/5mwfskp1.mp4"]}
+                        media={[
+                            "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/5mwfskp1.mp4",
+                            "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/w5stxuds.mp4"
+                        ]}
                         myRole="Full-stack Developer"
                         timeline="September 2024 - Present"
                         delay={0.2}
-                        gradient="bg-gradient-to-br"
-                    />
-                    <ExperienceCard
-                        title="Tag Feuds"
-                        fullDescription={[
-                            "While working at Tag Feuds I've made different discord bots and websites to assist in hosting TNT Tag events to hundreds of people. The biggest project was my ranked bot that allows players to 1v1 or 2v2 in ranked matches and climb the ELO ladder. Queueing, matchmaking, and elo calculations are all done by the bot.",
-                            "Tag Feuds is a Hypixel TNT Tag community that hosts events and tournaments for players to compete in. The community has grown to over 1,000 members and has a very active player base. There is a mini event almost every day and special events with prize pools a few times a year.",
-                        ]}
-                        cardImage="https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/yj2brdsg.png"
-                        cardDescription="While working on Tag Feuds I've made different discord bots and websites to assist in hosting TNT Tag events to hundreds of people. The biggest project was my ranked bot that allows players to 1v1 or 2v2 in ranked matches and climb the ELO ladder. Queueing, matchmaking, and elo calculations are all done by the bot."
-                        media={[
-                            "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/txovw4kp.png",
-                            "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/qozh8etz.png"
-                        ]}
-                        myRole="Full-stack Developer"
-                        timeline="November 2024 - August 2025"
-                        delay={0.3}
                         gradient="bg-gradient-to-br"
                     />
                 </ul>
