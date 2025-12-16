@@ -66,7 +66,7 @@ export default function Experience() {
                             "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/w5stxuds.mp4"
                         ]}
                         myRole="Full-stack Developer"
-                        timeline="September 2024 - Present"
+                        timeline="September 2024 - December 2025"
                         delay={0.2}
                         gradient="bg-gradient-to-br"
                     />
