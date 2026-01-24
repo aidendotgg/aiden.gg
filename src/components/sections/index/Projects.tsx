@@ -32,11 +32,11 @@ export default function Projects() {
               "Lilith is a proxy mod for Hypixel that lets you to see the stats of other players in your game, auto dodge games that have cheaters, lookup stats for any player in game, and more.",
               "This website serves as the main hub for Lilith, providing information about its features, download links, and support resources.",
             ]}
-            cardImage="https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/whlidakc.png"
+            cardImage="https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/raaz68s6.png"
             cardDescription="Lilith is a proxy mod for Hypixel that lets you to see the stats of other players in your game, auto dodge games that have cheaters, lookup stats for any player in game, and more."
             media={[
-              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/7l2m7dcd.mp4",
-              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/oxj9zman.png"
+              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/bzliiv0z.mp4",
+              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/u17ctj81.png"
             ]}
             myRole="Frontend Developer/Designer"
             delay={0.1}
@@ -49,12 +49,12 @@ export default function Projects() {
               "TNTTag info is a stats website for the Hypixel game TNT Tag. You can view an individual player's stats or view the top 100 wins and kills leaderboard.",
               "This website was made because at the time there wasn't a good place to view every single TNT Tag stat. TNT Tag is one of my favorite games on Hypixel and I wanted to make a website that would help the community."
             ]}
-            cardImage="https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/v2ivy4fx.png"
+            cardImage="https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/tvrm0cck.png"
             cardDescription="TNTTag info is a stats website for the Hypixel game TNT Tag. You can view an individual player's stats or view the top 100 wins and kills leaderboard."
             media={[
-              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/v2ivy4fx.png",
-              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/im0ufap9.png",
-              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/mlv9fs7c.png"
+              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/tvrm0cck.png",
+              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/rr5675i3.png",
+              "https://r2.e-z.host/2082d908-7c65-4fc3-b02a-5f50f9141543/k7kie26i.png"
             ]}
             myRole="Founder, Head Developer, Designer"
             delay={0.2}
