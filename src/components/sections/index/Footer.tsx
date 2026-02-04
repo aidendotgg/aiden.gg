@@ -9,7 +9,7 @@ export default function Footer() {
                     Aiden.gg - Made with NextJS, TailwindCSS, and ❤ by me
                 </p>
                 <p className="text-center font-medium brightness-75 text-base">
-                    Last updated: Jan 24th, 2026
+                    Last updated: Feb 4th, 2026
                 </p>
             </footer>
         </>
