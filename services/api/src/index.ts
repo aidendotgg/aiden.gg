@@ -9,7 +9,7 @@ export const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildPresences],
 })
 
-client.on("ready", (client) => {
+client.on("clientReady", (client) => {
     console.log(`Logged in as ${client.user.tag}`)
 })
 
