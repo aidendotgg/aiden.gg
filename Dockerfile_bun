@@ -1,0 +1,21 @@
+FROM oven/bun:1
+
+ARG SERVICE
+ARG BUILD
+
+WORKDIR /app
+
+RUN test -n "$SERVICE" || (echo "SERVICE env var is required" && exit 1)
+RUN test -n "$BUILD" || (echo "BUILD env var is required" && exit 1)
+
+COPY package.json bun.lock ./
+
+COPY libraries ./libraries
+COPY services/$SERVICE ./services/$SERVICE
+
+RUN bun install
+
+WORKDIR /app/services/$SERVICE
+RUN if [ "$BUILD" = "true" ]; then bun run build; fi
+
+CMD ["bun", "run", "start"]

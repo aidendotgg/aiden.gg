@@ -1,0 +1,35 @@
+# --- Dependencies ---
+**/node_modules
+**/.bun
+**/.pnpm
+**/.yarn
+**/.cache
+
+# --- Build outputs ---
+**/dist
+**/build
+**/.next
+**/.output
+**/coverage
+**/*.log
+
+# --- Turborepo / monorepo tools ---
+**/.turbo
+
+# --- VCS ---
+.git
+.gitignore
+
+# --- OS / editor junk ---
+**/.DS_Store
+**/Thumbs.db
+**/.vscode
+**/.idea
+
+# --- Docker / CI ---
+Dockerfile
+docker-compose.yml
+
+# --- Environment files ---
+.env
+.env.*
