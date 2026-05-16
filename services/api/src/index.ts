@@ -14,7 +14,7 @@ client.on("ready", (client) => {
 })
 
 client.on("presenceUpdate", async (oldPresence, newPresence) => {
-    let guildMember = client.guilds.cache.get(process.env.GUILD_ID!)?.members.cache.get(process.env.USER_ID!)
+    let guildMember = client.guilds.cache.get(process.env.GUILD_ID!)?.members?.cache?.get(process.env.USER_ID!)
 
     if (guildMember) sendPresence(guildMember, newPresence)
 })
