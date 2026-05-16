@@ -16,17 +16,17 @@ export async function sendPresence(guildMember: GuildMember, newPresence?: Prese
             activities: [],
         }
         if (newPresence.activities.length > 0) {
-            for (const presence of newPresence.activities) {
-                if (presence.name !== "Custom Status") {
+            for (const activity of newPresence.activities) {
+                if (activity.name !== "Custom Status") {
                     presenceObject.activities.push({
-                        applicationId: presence.applicationId,
-                        assets: await formatAssets(presence),
-                        details: presence.details,
-                        name: presence.name,
-                        title: formatTitle(presence),
-                        state: presence.state,
-                        type: ActivityType[presence.type],
-                        timestamps: presence.timestamps ? { start: presence.timestamps.start, end: presence.timestamps?.end } : null,
+                        applicationId: activity.applicationId,
+                        assets: await formatAssets(activity),
+                        details: activity.details,
+                        name: activity.name,
+                        title: formatTitle(activity),
+                        state: activity.state,
+                        type: ActivityType[activity.type],
+                        timestamps: activity.timestamps ? { start: activity.timestamps.start, end: activity.timestamps?.end } : null,
                     })
                 }
             }
