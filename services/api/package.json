@@ -2,7 +2,9 @@
   "name": "@aiden/api",
   "module": "src/index.ts",
   "type": "module",
-  "private": true,
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
