@@ -3,9 +3,7 @@ import { type DiscordPresence } from "@aiden/types";
 import { formatAssets, formatTitle } from "./FormatUtils";
 import { app, client } from "..";
 
-export async function sendPresence(guildMember: GuildMember, newPresence?: Presence | null, ws?: any, local?: boolean) {
-    if (!newPresence) newPresence = guildMember.presence
-
+export async function sendPresence(guildMember: GuildMember, newPresence?: Presence | null, ws?: any) {
     let presenceObject: DiscordPresence;
     if (newPresence && newPresence.user) {
         presenceObject = {
@@ -41,7 +39,7 @@ export async function sendPresence(guildMember: GuildMember, newPresence?: Prese
         }
     }
 
-    if (local && ws) {
+    if (ws) {
         ws.send(JSON.stringify(presenceObject))
     } else {
         app.server?.publish(guildMember.id, JSON.stringify(presenceObject));
