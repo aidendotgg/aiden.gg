@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Triangle } from "ogl";
 
-// From https://reactbits.dev/backgrounds/grainient
+// From https://reactbits.dev/backgrounds/grainient and a little bit of claude because I DO NOT know webgl
 
 interface GrainientProps {
     timeSpeed?: number;
@@ -33,6 +33,18 @@ const hexToRgb = (hex: string): [number, number, number] => {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     if (!result) return [1, 1, 1];
     return [parseInt(result[1], 16) / 255, parseInt(result[2], 16) / 255, parseInt(result[3], 16) / 255];
+};
+
+const hasWebgl2 = (): boolean => {
+    try {
+        const canvas = document.createElement("canvas");
+        const gl = canvas.getContext("webgl2");
+        if (!gl) return false;
+        gl.getExtension("WEBGL_lose_context")?.loseContext();
+        return true;
+    } catch {
+        return false;
+    }
 };
 
 const vertex = `#version 300 es
@@ -167,12 +179,19 @@ const Grainient: React.FC<GrainientProps> = ({
         const container = containerRef.current;
         if (!container) return;
 
-        const renderer = new Renderer({
-            webgl: 2,
-            alpha: true,
-            antialias: false,
-            dpr: Math.min(window.devicePixelRatio || 1, 2),
-        });
+        if (!hasWebgl2()) return;
+
+        let renderer: InstanceType<typeof Renderer>;
+        try {
+            renderer = new Renderer({
+                webgl: 2,
+                alpha: true,
+                antialias: false,
+                dpr: Math.min(window.devicePixelRatio || 1, 2),
+            });
+        } catch {
+            return;
+        }
 
         const gl = renderer.gl;
         const canvas = gl.canvas as HTMLCanvasElement;
@@ -181,38 +200,50 @@ const Grainient: React.FC<GrainientProps> = ({
         canvas.style.display = "block";
         container.appendChild(canvas);
 
-        const geometry = new Triangle(gl);
-        const program = new Program(gl, {
-            vertex,
-            fragment,
-            uniforms: {
-                iTime: { value: 0 },
-                iResolution: { value: new Float32Array([1, 1]) },
-                uTimeSpeed: { value: 0.25 },
-                uColorBalance: { value: 0.0 },
-                uWarpStrength: { value: 1.0 },
-                uWarpFrequency: { value: 5.0 },
-                uWarpSpeed: { value: 2.0 },
-                uWarpAmplitude: { value: 50.0 },
-                uBlendAngle: { value: 0.0 },
-                uBlendSoftness: { value: 0.05 },
-                uRotationAmount: { value: 500.0 },
-                uNoiseScale: { value: 2.0 },
-                uGrainAmount: { value: 0.1 },
-                uGrainScale: { value: 2.0 },
-                uGrainAnimated: { value: 0.0 },
-                uContrast: { value: 1.5 },
-                uGamma: { value: 1.0 },
-                uSaturation: { value: 1.0 },
-                uCenterOffset: { value: new Float32Array([0, 0]) },
-                uZoom: { value: 0.9 },
-                uColor1: { value: new Float32Array([1, 1, 1]) },
-                uColor2: { value: new Float32Array([1, 1, 1]) },
-                uColor3: { value: new Float32Array([1, 1, 1]) },
-            },
-        });
+        let program: InstanceType<typeof Program>;
+        let mesh: InstanceType<typeof Mesh>;
+        try {
+            const geometry = new Triangle(gl);
+            program = new Program(gl, {
+                vertex,
+                fragment,
+                uniforms: {
+                    iTime: { value: 0 },
+                    iResolution: { value: new Float32Array([1, 1]) },
+                    uTimeSpeed: { value: 0.25 },
+                    uColorBalance: { value: 0.0 },
+                    uWarpStrength: { value: 1.0 },
+                    uWarpFrequency: { value: 5.0 },
+                    uWarpSpeed: { value: 2.0 },
+                    uWarpAmplitude: { value: 50.0 },
+                    uBlendAngle: { value: 0.0 },
+                    uBlendSoftness: { value: 0.05 },
+                    uRotationAmount: { value: 500.0 },
+                    uNoiseScale: { value: 2.0 },
+                    uGrainAmount: { value: 0.1 },
+                    uGrainScale: { value: 2.0 },
+                    uGrainAnimated: { value: 0.0 },
+                    uContrast: { value: 1.5 },
+                    uGamma: { value: 1.0 },
+                    uSaturation: { value: 1.0 },
+                    uCenterOffset: { value: new Float32Array([0, 0]) },
+                    uZoom: { value: 0.9 },
+                    uColor1: { value: new Float32Array([1, 1, 1]) },
+                    uColor2: { value: new Float32Array([1, 1, 1]) },
+                    uColor3: { value: new Float32Array([1, 1, 1]) },
+                },
+            });
+            mesh = new Mesh(gl, { geometry, program });
+        } catch {
+            // Shader compile / link failure — leave the container empty.
+            try {
+                container.removeChild(canvas);
+            } catch {
+                /* ignore */
+            }
+            return;
+        }
 
-        const mesh = new Mesh(gl, { geometry, program });
         ctxMap.set(container, { renderer, program, mesh });
 
         const setSize = () => {
@@ -266,6 +297,13 @@ const Grainient: React.FC<GrainientProps> = ({
         };
         document.addEventListener("visibilitychange", onVisibility);
 
+        const onContextLost = (e: Event) => {
+            e.preventDefault();
+            tryStop();
+            canvas.style.display = "none";
+        };
+        canvas.addEventListener("webglcontextlost", onContextLost);
+
         tryStart();
 
         return () => {
@@ -273,6 +311,7 @@ const Grainient: React.FC<GrainientProps> = ({
             ro.disconnect();
             io.disconnect();
             document.removeEventListener("visibilitychange", onVisibility);
+            canvas.removeEventListener("webglcontextlost", onContextLost);
             ctxMap.delete(container);
             try {
                 container.removeChild(canvas);
