@@ -79,7 +79,7 @@ export default function Home() {
                     blendSoftness={1}
                     rotationAmount={500}
                     noiseScale={2}
-                    grainAmount={0.05}
+                    grainAmount={0.03}
                     grainScale={1}
                     grainAnimated={false}
                     contrast={1.5}
@@ -89,12 +89,12 @@ export default function Home() {
                     centerY={0}
                     zoom={0.9}
                 />
-                <div className="absolute inset-0 flex z-10 overflow-y-auto scrollbar-track-bg scrollbar-thumb-light rounded-sm overflow-x-hidden">
-                    <div className="flex min-[1690px]:flex-row flex-col gap-3 max-w-525 max-h-275 min-[420px]:p-4 p-0 w-full h-full m-auto">
+                <div className="absolute inset-0 flex z-10 overflow-y-auto overflow-x-hidden scrollbar-track-bg scrollbar-thumb-light rounded-sm">
+                    <div className="flex min-[1500px]:flex-row flex-col gap-3 max-w-525 max-h-275 min-[420px]:p-4 p-0 w-full h-full m-auto">
                         <div className="flex flex-col gap-6 p-4 w-fit">
                             <div className="flex flex-col gap-3 self-start">
                                 <h1 className="sm:text-6xl text-5xl font-bold">Hey, I'm Aiden</h1>
-                                <p className="sm:text-xl text-lg brightness-90 min-[1690px]:min-w-full xl:w-2/3">
+                                <p className="sm:text-xl text-lg brightness-90 min-[1500px]:min-w-full xl:w-2/3">
                                     I'm a 20 year old full stack web developer located in upstate New York. Frontend is my strongsuit but I have experience in writing both. I work well both solo and
                                     alongside a design team. I've worked on a variety of projects and have ample experience in pushing websites securely to production.
                                 </p>
@@ -127,7 +127,7 @@ export default function Home() {
                             </div>
                             <div className="flex flex-col gap-3 self-start">
                                 <h1 className="text-2xl font-bold">Work Experience</h1>
-                                <div className="flex flex-col gap-4 mb-4 min-[1690px]:min-w-full xl:w-2/3">
+                                <div className="flex flex-col gap-4 mb-4 min-[1500px]:min-w-full xl:w-2/3 overflow-y-auto scrollbar-track-bg scrollbar-thumb-light px-1">
                                     <ExperienceCard
                                         img={ezLogo}
                                         site="https://e-z.gg"
@@ -155,8 +155,8 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex p-4 shrink-0 min-[1690px]:h-full">
-                            <div className="grid md:grid-cols-2 grid-cols-1 gap-3 h-full w-full overflow-y-auto overflow-x-visible scrollbar-track-bg scrollbar-thumb-light rounded-sm">
+                        <div className="flex p-4 shrink-0 min-[1500px]:h-full min-[1700px]:w-auto min-[1500px]:w-1/2 w-auto">
+                            <div className="grid md:grid-cols-2 grid-cols-1 gap-3 h-full w-full rounded-sm">
                                 <ProjectCard
                                     tech={["TypeScript", "React", "NextJS", "TailwindCSS", "Framer Motion", "Bun", "Elysia", "NodeJS", "Fastify", "MongoDB"]}
                                     img={ezhostImage}
