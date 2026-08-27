@@ -1,0 +1,22 @@
+@import "./fonts/satoshi.css";
+
+@import "tailwindcss";
+
+@custom-variant hover (&:hover);
+
+@theme {
+    --color-light: #1d1d27;
+    --color-mid: #0e0e17;
+    --color-dark: #010106;
+    --color-bg: #010106;
+}
+
+body {
+    background: var(--color-bg);
+    color: white;
+    font-family: "Satoshi-Variable", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}

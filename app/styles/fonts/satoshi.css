@@ -1,0 +1,49 @@
+/**
+* @license
+*
+* Font Family: Satoshi
+* Designed by: Deni Anggara
+* URL: https://www.fontshare.com/fonts/satoshi
+* © 2026 Indian Type Foundry
+*
+* Satoshi Variable (Variable font)
+* Satoshi VariableItalic (Variable font)
+
+*
+*/
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 900.0;
+*
+* available axes:
+'wght' (range from 300.0 to 900.0
+*/
+@font-face {
+    font-family: "Satoshi-Variable";
+    src:
+        url("../fonts/Satoshi-Variable.woff2") format("woff2"),
+        url("../fonts/Satoshi-Variable.woff") format("woff"),
+        url("../fonts/Satoshi-Variable.ttf") format("truetype");
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 900.0;
+*
+* available axes:
+'wght' (range from 300.0 to 900.0
+*/
+@font-face {
+    font-family: "Satoshi-VariableItalic";
+    src:
+        url("../fonts/Satoshi-VariableItalic.woff2") format("woff2"),
+        url("../fonts/Satoshi-VariableItalic.woff") format("woff"),
+        url("../fonts/Satoshi-VariableItalic.ttf") format("truetype");
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: italic;
+}
