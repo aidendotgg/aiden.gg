@@ -160,6 +160,7 @@ export default function Home() {
                                 <ProjectCard
                                     tech={["TypeScript", "React", "NextJS", "TailwindCSS", "Framer Motion", "Bun", "Elysia", "NodeJS", "Fastify", "MongoDB"]}
                                     img={ezhostImage}
+                                    animDelay={0.3}
                                     modalMedia={[
                                         { type: "video", src: ezhostVideo },
                                         { type: "video", src: ezbioVideo },
@@ -180,6 +181,7 @@ export default function Home() {
                                 <ProjectCard
                                     tech={["TypeScript", "React", "NextJS", "TanStack Start", "TailwindCSS", "Framer Motion", "Gsap"]}
                                     img={oneclientImage}
+                                    animDelay={0.4}
                                     modalMedia={[
                                         { type: "video", src: oneclientVideo },
                                         { type: "video", src: oneclientStoreVideo },
@@ -193,6 +195,7 @@ export default function Home() {
                                 <ProjectCard
                                     tech={["TypeScript", "React", "NextJS", "TailwindCSS", "Framer Motion", "Gsap"]}
                                     img={voidtagImage}
+                                    animDelay={0.5}
                                     modalMedia={[
                                         { type: "video", src: voidtagVideo },
                                         { type: "image", src: vtGameImage },
@@ -207,6 +210,7 @@ export default function Home() {
                                 <ProjectCard
                                     tech={["TypeScript", "Vue", "NuxtJS", "Sass", "Framer Motion", "Gsap"]}
                                     img={outsoImage}
+                                    animDelay={0.6}
                                     modalMedia={[
                                         { type: "video", src: outsoVideo },
                                         { type: "video", src: outsoBioCardVideo },
@@ -218,6 +222,7 @@ export default function Home() {
                                 <ProjectCard
                                     tech={["TypeScript", "React", "NextJS", "TailwindCSS", "Bun", "Elysia", "MongoDB", "Redis"]}
                                     img={tnttaginfoImage}
+                                    animDelay={0.7}
                                     modalMedia={[{ type: "video", src: tnttaginfoVideo }]}
                                     logoImg={tnttaginfoLogo}
                                     name="TNTTag.info"
@@ -228,6 +233,7 @@ export default function Home() {
                                 <ProjectCard
                                     tech={["TypeScript", "React", "NextJS", "TailwindCSS", "Framer Motion"]}
                                     img={lilithImage}
+                                    animDelay={0.8}
                                     modalMedia={[{ type: "video", src: lilithVideo }]}
                                     logoImg={lilithLogo}
                                     name="Lilith"
