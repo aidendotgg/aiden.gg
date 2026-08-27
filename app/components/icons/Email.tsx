@@ -1,6 +1,7 @@
 export default function Email({ className }: { className?: string }) {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" className={className}>
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" className={className}>
+            <title>Email</title>
             <path d="M0 0h36v36H0z" fill="none" />
             <path
                 fill="currentColor"

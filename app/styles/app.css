@@ -11,6 +11,13 @@
     --color-bg: #010106;
 
     --animate-fade: fade 0.5s cubic-bezier(0.39, 0.21, 0.12, 0.96) both;
+    --animate-opacity-fade: opacity-fade 0.5s cubic-bezier(0.39, 0.21, 0.12, 0.96) both;
+
+    @keyframes opacity-fade {
+        from {
+            opacity: 0;
+        }
+    }
 
     @keyframes fade {
         from {

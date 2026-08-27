@@ -1,6 +1,7 @@
 export default function Web({ className }: { className?: string }) {
     return (
-        <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className={className}>
+            <title>Website</title>
             <path d="M0 0h48v48H0z" fill="none" />
             <g fill="none" stroke="currentColor" strokeWidth="3">
                 <path strokeLinejoin="round" d="M3 24a21 21 0 1 0 42 0a21 21 0 1 0-42 0" />

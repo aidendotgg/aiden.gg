@@ -21,7 +21,7 @@ export default function ExperienceCard({
     return (
         <div className="flex flex-row items-start gap-3">
             <div className="relative bg-mid/75 border border-dark/75 p-2 rounded-sm shrink-0">
-                <img className="sm:h-20 h-16 sm:w-20 w-16" src={img} />
+                <img className="sm:h-20 h-16 sm:w-20 w-16" src={img} alt={`${name} logo`} />
             </div>
             <div className="flex flex-col">
                 <div className="flex flex-row gap-2 justify-between items-center">

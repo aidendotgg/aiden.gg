@@ -1,6 +1,7 @@
 export default function Elysia({ className }: { className?: string }) {
     return (
         <svg role="img" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <title>Elysia</title>
             <path
                 fillRule="evenodd"
                 clipRule="evenodd"

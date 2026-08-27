@@ -116,7 +116,7 @@ export default function MediaCarousel({ media, ref, onIndexChange }: { media: { 
                                 className={`flex absolute select-none aspect-video ${isResetting ? "transition-none" : "transition-all"} duration-500 bg-mid/75 border border-dark/75 overflow-hidden rounded-sm`}
                             >
                                 {media.type === "image" ? (
-                                    <img draggable="false" src={media.src} className="inset-0 flex mx-auto" />
+                                    <img draggable="false" src={media.src} className="inset-0 flex mx-auto" alt={`Slide ${index + 1}`} />
                                 ) : (
                                     <video
                                         draggable="false"
@@ -137,7 +137,7 @@ export default function MediaCarousel({ media, ref, onIndexChange }: { media: { 
                         className={`flex absolute select-none aspect-video ${isResetting ? "transition-none" : "transition-all"} duration-500 bg-mid/75 border border-dark/75 overflow-hidden rounded-sm`}
                     >
                         {media[0].type === "image" ? (
-                            <img draggable="false" src={media[0].src} className="inset-0 flex mx-auto" />
+                            <img draggable="false" src={media[0].src} className="inset-0 flex mx-auto" alt="Slide 1" />
                         ) : (
                             <video draggable="false" data-slide={2} src={media[0].src} className="inset-0 flex mx-auto" preload="auto" loop muted playsInline />
                         )}

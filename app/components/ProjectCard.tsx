@@ -47,12 +47,12 @@ export default function ProjectCard({
     return (
         <div
             className={`relative flex overflow-hidden group bg-mid/75 border border-dark/75 aspect-video h-full w-full rounded-sm animate-fade`}
-            style={{ animationDelay: `${animDelay}s` }}
+            style={{ willChange: "opacity", animationDelay: `${animDelay}s` }}
         >
-            <img className="absolute inset-0 aspect-video" src={img} />
+            <img className="absolute inset-0 aspect-video" src={img} alt={`${name} screenshot`} />
             <div className="absolute top-0 p-2 rounded-t-sm w-full opacity-0 group-hover:opacity-100 -translate-y-30 group-hover:translate-y-0 bg-mid/75 backdrop-blur-sm border-b border-b-dark/75 duration-300">
                 <div className="flex flex-row gap-2 items-center">
-                    <img className="h-8 w-8" src={logoImg} />
+                    <img className="h-8 w-8" src={logoImg} alt={`${name} logo`} />
                     <h2 className="text-2xl font-bold">{name}</h2>
                 </div>
             </div>

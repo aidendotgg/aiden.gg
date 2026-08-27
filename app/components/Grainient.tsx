@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Triangle } from "ogl";
-import { motion } from "framer-motion";
 
 // From https://reactbits.dev/backgrounds/grainient
 
@@ -338,14 +337,7 @@ const Grainient: React.FC<GrainientProps> = ({
         color3,
     ]);
 
-    return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 0.5, delay: 0.3, ease: [0.39, 0.21, 0.12, 0.96] } }}
-            ref={containerRef}
-            className={`relative h-full w-full overflow-hidden ${className}`.trim()}
-        />
-    );
+    return <div ref={containerRef} className={`relative h-full w-full overflow-hidden animate-opacity-fade ${className}`.trim()} style={{ willChange: "opacity", animationDelay: "0.3s" }} />;
 };
 
 export default Grainient;
