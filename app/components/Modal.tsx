@@ -14,9 +14,9 @@ export default function Modal({ children, open, setOpen, origin }: { children: R
                         initial={{ backdropFilter: "blur(0px)", backgroundColor: "rgba(0, 0, 0, 0)" }}
                         animate={{ backdropFilter: "blur(10px)", backgroundColor: "rgba(0, 0, 0, 0.5)", transition: { duration: 0.5, delay: 0.1, ease: [0.39, 0.21, 0.12, 0.96] } }}
                         exit={{ backdropFilter: "blur(0px)", backgroundColor: "rgba(0, 0, 0, 0)", transition: { duration: 0.5, delay: 0.1, ease: [0.39, 0.21, 0.12, 0.96] } }}
-                        className="fixed inset-0"
+                        className="fixed inset-0 overflow-y-auto"
                     >
-                        <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
+                        <div className="flex w-screen min-h-screen items-center justify-center px-4 py-12">
                             <DialogPanel
                                 as={motion.div}
                                 initial={{ x: originX, y: originY, scale: 0.2, opacity: 0.1 }}
