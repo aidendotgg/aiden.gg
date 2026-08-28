@@ -15,6 +15,7 @@ import TailwindCSS from "./icons/tech/TailwindCSS";
 import TanStackStart from "./icons/tech/TanStackStart";
 import TypeScript from "./icons/tech/TypeScript";
 import Vue from "./icons/tech/Vue";
+import ReactRouter from "./icons/tech/ReactRouter";
 
 export default function TechBadge({ tech }: { tech: string }) {
     const techMap: Record<string, { color: string; icon: ReactNode }> = {
@@ -24,6 +25,7 @@ export default function TechBadge({ tech }: { tech: string }) {
         Vue: { color: "#4FC08D", icon: <Vue className="h-4 w-4" /> },
         NuxtJS: { color: "#00DC82", icon: <NuxtJS className="h-4 w-4" /> },
         "TanStack Start": { color: "#54965E", icon: <TanStackStart className="h-4 w-4" /> },
+        "React Router": { color: "#CA4245", icon: <ReactRouter className="h-4 w-4" /> },
         "Framer Motion": { color: "#0055FF", icon: <FramerMotion className="h-4 w-4" /> },
         Sass: { color: "#CC6699", icon: <Sass className="h-4 w-4" /> },
         Gsap: { color: "#0AE448", icon: <Gsap className="h-4 w-4" /> },

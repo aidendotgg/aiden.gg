@@ -125,9 +125,9 @@ export default function Home() {
                                     </LinkButton>
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-3 self-start">
+                            <div className="flex flex-col gap-3 self-start overflow-y-auto">
                                 <h1 className="text-2xl font-bold">Work Experience</h1>
-                                <div className="flex flex-col gap-4 mb-4 min-[1500px]:min-w-full xl:w-2/3 overflow-y-auto scrollbar-track-bg scrollbar-thumb-light px-1">
+                                <div className="flex flex-col gap-4 min-[1500px]:min-w-full xl:w-2/3 overflow-y-auto scrollbar-track-bg scrollbar-thumb-light pr-2">
                                     <ExperienceCard
                                         img={ezLogo}
                                         site="https://e-z.gg"
