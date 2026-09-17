@@ -18,12 +18,12 @@ import voidtagLogo from "~/assets/logos/voidtag.png";
 import tnttaginfoLogo from "~/assets/logos/tnttaginfo.png";
 import lilithLogo from "~/assets/logos/lilith.png";
 
-import ezhostImage from "~/assets/sites/images/e-zhost.png";
-import oneclientImage from "~/assets/sites/images/oneclient.png";
-import voidtagImage from "~/assets/sites/images/voidtag.png";
-import outsoImage from "~/assets/sites/images/outso.png";
-import tnttaginfoImage from "~/assets/sites/images/tnttaginfo.png";
-import lilithImage from "~/assets/sites/images/lilith.png";
+import ezhostImage from "~/assets/sites/images/e-zhost.png?w=1920&format=webp&quality=82";
+import oneclientImage from "~/assets/sites/images/oneclient.png?w=1920&format=webp&quality=82";
+import voidtagImage from "~/assets/sites/images/voidtag.png?w=1920&format=webp&quality=82";
+import outsoImage from "~/assets/sites/images/outso.png?w=1920&format=webp&quality=82";
+import tnttaginfoImage from "~/assets/sites/images/tnttaginfo.png?w=1920&format=webp&quality=82";
+import lilithImage from "~/assets/sites/images/lilith.png?w=1920&format=webp&quality=82";
 import bio1Image from "~/assets/sites/images/bio1.png";
 import bio2Image from "~/assets/sites/images/bio2.png";
 import bio3Image from "~/assets/sites/images/bio3.png";
