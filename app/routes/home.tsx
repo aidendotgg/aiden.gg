@@ -95,8 +95,8 @@ export default function Home() {
                             <div className="flex flex-col gap-3 self-start">
                                 <h1 className="sm:text-6xl text-5xl font-bold">Hey, I'm Aiden</h1>
                                 <p className="sm:text-xl text-lg brightness-90 min-[1500px]:min-w-full xl:w-2/3">
-                                    I'm a 20 year old full stack web developer located in upstate New York. Frontend is my strongsuit but I have experience in writing both. I work well both solo and
-                                    alongside a design team. I've worked on a variety of projects and have ample experience in pushing websites securely to production.
+                                    I'm a 20 year old full-stack web developer located in upstate New York. Frontend is my strong suit but I have experience in writing backend as well. I work well
+                                    both solo and alongside a design team. I've worked on a variety of projects and have ample experience in pushing websites securely to production.
                                 </p>
                                 <div className="flex flex-row flex-wrap gap-2">
                                     <LinkButton size="fit" href="https://github.com/aidendotgg">
