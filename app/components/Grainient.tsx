@@ -213,7 +213,6 @@ const Grainient: React.FC<GrainientProps> = ({
         const container = containerRef.current;
         if (!container) return;
 
-        const lowEnd = window.matchMedia("(pointer: coarse), (max-width: 768px)").matches;
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         let cleanup: (() => void) | undefined;
         let cancelled = false;
@@ -237,13 +236,17 @@ const Grainient: React.FC<GrainientProps> = ({
                     webgl: 2,
                     alpha: true,
                     antialias: false,
-                    dpr: lowEnd ? 0.5 : 1,
+                    dpr: 1,
                 });
             } catch {
                 return;
             }
 
             const gl = renderer.gl;
+            if (!gl || !renderer.isWebgl2) return;
+            const debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
+            const gpuName = debugInfo ? String(gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL)) : "";
+            if (/swiftshader|llvmpipe|software|basic render/i.test(gpuName)) renderer.dpr = 0.5;
             const canvas = gl.canvas as HTMLCanvasElement;
             canvas.style.width = "100%";
             canvas.style.height = "100%";
@@ -312,7 +315,7 @@ const Grainient: React.FC<GrainientProps> = ({
             let isPageVisible = !document.hidden;
             const t0 = performance.now();
 
-            const frameInterval = lowEnd ? 1000 / 24 : 1000 / 30;
+            const frameInterval = 1000 / 24;
             let last = 0;
             const loop = (t: number) => {
                 raf = requestAnimationFrame(loop);
