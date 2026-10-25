@@ -117,7 +117,7 @@ export default function Home() {
                                     <LinkButton size="fit" href="https://www.last.fm/user/aidendotgg">
                                         <Lastfm className="w-8 h-8 fill-white" />
                                     </LinkButton>
-                                    <LinkButton size="fit" href="https://discord.gg/ez">
+                                    <LinkButton size="fit" href="https://discord.com/users/1300653877338570752">
                                         <Discord className="w-8 h-8 fill-white" />
                                     </LinkButton>
                                     <LinkButton size="fit" href="mailto:me@aiden.gg">
